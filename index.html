@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Application</title>
+</head>
+<body>
+    <div class="header">
+        <h1 id="main-header"></h1>
+    </div>
+    <section id="current">
+        <div class="current-body">
+            <h2 class="current-title">Currently</h2>
+            <h3 id="current-degree"></h3>
+        </div>
+        <div class="current-icon">
+            <img id="current-icon">
+        </div>
+        <div class="current-body-info">
+            <span id="current-text"></span>
+            <span id="current-feelslike"></span>
+        </div>
+        <div class="more-info">
+            <div class="more-info-container">
+                <span>Wind</span>
+                <span id="wind-info"></span>
+            </div>
+            <div class="more-info-container">
+                <span>Humidity</span>
+                <span id="humidity-info"></span>
+            </div>
+            <div class="more-info-container">
+                <span>Pressure</span>
+                <span id="pressure-info"></span>
+            </div>
+            <div class="more-info-container">
+                <span>UV Index</span>
+                <span id="uv-info"></span>
+            </div>
+        </div>
+    </section>
+    <!-- dynamicly typed in ui.js -->
+    <ul id="forecast-list"></ul>
+    <button id="location-btn">Change Location</button>
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span id="close-btn">&times;</span>
+            <form id="location-form">
+                <input type="text" id="location-input" placeholder="Enter a city...">
+                <input type="submit" value="SUBMIT" id="submit-btn">
+            </form>
+        </div>
+    </div>
+    <script src="storage.js"></script>
+    <script src="weather.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
